@@ -1,0 +1,10 @@
+<suite name="Final Project Suite">
+    <test name="Shopping Test" >
+        <classes>
+            <class name="tests.HomeTests" />
+            <class name="tests.SearchProductsTest" />
+            <class name="tests.AddToCartTest" />
+
+        </classes>
+    </test>
+</suite>
