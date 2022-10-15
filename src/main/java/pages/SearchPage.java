@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class SearchPage extends BasePage{
-    String productName = "Blue Top";
     private By searchField = By.id("search_product");
     private By searchBtn = By.cssSelector(".container > button");
     private By searchedProducts = By.cssSelector(".features_items > h2");
