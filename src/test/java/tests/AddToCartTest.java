@@ -1,7 +1,6 @@
 package tests;
 
 import pages.CartPage;
-import pages.HomePage;
 import pages.NavigationBarPage;
 import pages.ProductsPage;
 import org.testng.Assert;
@@ -9,6 +8,7 @@ import org.testng.annotations.Test;
 
 public class AddToCartTest extends BaseTest {
     NavigationBarPage navigationBarPage;
+    CartPage cartPage;
 
     @Test
     public void testAddItemsToCart() //Au_Cart_TC_002
@@ -45,7 +45,7 @@ public class AddToCartTest extends BaseTest {
         productsPage.clickContinueShoppingBtn();
         productsPage.addFirstProductToCart();
 
-        CartPage cartPage = productsPage.clickViewCartBtn();
+        cartPage = productsPage.clickViewCartBtn();
 
         Assert.assertEquals(cartPage.getPriceOfFirstProduct(), "Rs. 500",
                 "The Price should be Rs. 500");
