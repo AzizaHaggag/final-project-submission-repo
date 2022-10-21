@@ -9,6 +9,8 @@ import pages.SearchPage;
 import static FileReaders.FileReaders.getJsonValueByKey;
 public class SearchProductsTest extends BaseTest {
     NavigationBarPage navigationBarPage;
+    ProductsPage productsPage;
+    SearchPage searchPage;
     String productTitle;
     String  productTitle2;
     @BeforeClass
@@ -23,17 +25,18 @@ public class SearchProductsTest extends BaseTest {
     {
 
         navigationBarPage = new NavigationBarPage(driver);
-        ProductsPage productsPage = navigationBarPage.clickProductsFromNavBar();
+        productsPage = navigationBarPage.clickProductsFromNavBar();
         Assert.assertEquals(productsPage.allProducts(), "ALL PRODUCTS",
                 "The Text should be ALL PRODUCTS");
 
-        SearchPage searchPage = new SearchPage(driver);
+        searchPage = new SearchPage(driver);
         searchPage.productSearch(productTitle);
 
         Assert.assertEquals(searchPage.searchedProducts(), "SEARCHED PRODUCTS",
                 "The Text should be SEARCHED PRODUCTS");
 
-        Assert.assertEquals(searchPage.getModalContent(), 12, "The Text should be contains Top");
+        Assert.assertEquals(searchPage.getModalContent(), 12,
+                "The Text should be contains Top");
     }
 
     @Test
@@ -41,12 +44,13 @@ public class SearchProductsTest extends BaseTest {
     {
 
         navigationBarPage = new NavigationBarPage(driver);
-        ProductsPage productsPage = navigationBarPage.clickProductsFromNavBar();
+        productsPage = navigationBarPage.clickProductsFromNavBar();
         Assert.assertEquals(productsPage.allProducts(), "ALL PRODUCTS",
                 "The Text should be ALL PRODUCTS");
-        SearchPage searchPage = new SearchPage(driver);
+        searchPage = new SearchPage(driver);
         searchPage.productSearch(productTitle2);
-        Assert.assertEquals(searchPage.searchedProducts(), "There is no results related to this search keyword",
+        Assert.assertEquals(searchPage.searchedProducts(),
+                "There is no results related to this search keyword",
                 "The Text should be There is no results related to this search keyword");
         }
     }

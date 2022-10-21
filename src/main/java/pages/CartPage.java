@@ -15,7 +15,6 @@ public class CartPage extends BasePage{
     private By quantityOfFirstProduct = By.cssSelector("#product-1> .cart_quantity");
     private By cartTotalOfFirstProduct = By.cssSelector("#product-1> .cart_total");
 
-
     public int getNumberOfAddedItems()
     {
         List<WebElement> productsInTheCart = locateListOfElement(itemsInTheCart);
@@ -33,6 +32,7 @@ public class CartPage extends BasePage{
     {
         return getTextOfElement(cartTotalOfFirstProduct);
     }
+
 
 }
 
