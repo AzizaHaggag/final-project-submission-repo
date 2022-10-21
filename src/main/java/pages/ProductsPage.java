@@ -21,7 +21,7 @@ public class ProductsPage extends BasePage {
     }
 
     public void scrollFirstProduct() {
-        scrollingProductsPageV(500);
+        scrollingProductsPageV(600);
     }
 
     public void addFirstProductToCart() {
@@ -34,7 +34,7 @@ public class ProductsPage extends BasePage {
         return new ProductsPage(driver);
     }
 
-    public ProductsPage firstProduct() {
+    public ProductsPage addOneProductMultipleTimes() {
 
         for (int i = 0; i <= 3; i++) {
             hoverOverElement(firstProduct);

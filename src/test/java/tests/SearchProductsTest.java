@@ -21,7 +21,7 @@ public class SearchProductsTest extends BaseTest {
 
     }
     @Test
-    public void testUserCanNavigatedAllProductsPage() //Au_Pr_TC_003
+    public void testAllSearchResultShouldContainTheSearchKeyword() //Au_Pr_TC_003
     {
 
         navigationBarPage = new NavigationBarPage(driver);

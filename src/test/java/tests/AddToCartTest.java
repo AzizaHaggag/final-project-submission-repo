@@ -32,12 +32,12 @@ public class AddToCartTest extends BaseTest {
     }
 
     @Test
-    public void testAddMultipleItemsToCart() //Au_Cart_TC_003
+    public void testAddOneProductMultipleTimesToCart() //Au_Cart_TC_003
     {
         navigationBarPage = new NavigationBarPage(driver);
         productsPage = navigationBarPage.clickProductsFromNavBar();
         productsPage.scrollFirstProduct();
-        productsPage.firstProduct();
+        productsPage.addOneProductMultipleTimes();
 
         cartPage = productsPage.clickViewCartBtn();
         Assert.assertEquals(cartPage.getNumberOfAddedItems(), 1,
